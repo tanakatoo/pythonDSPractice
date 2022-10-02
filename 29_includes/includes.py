@@ -9,7 +9,7 @@ def includes(collection, sought, start=None):
     index. This `start` is ignored for sets/dictionaries, since they aren't
     ordered.
 
-        >>> includes([1, 2, 3], 1)
+        >>>  includes([1, 2, 3], 1)
         True
 
         >>> includes([1, 2, 3], 1, 2)
@@ -30,3 +30,18 @@ def includes(collection, sought, start=None):
         >>> includes({"apple": "red", "berry": "blue"}, "blue")
         True
     """
+    if isinstance(collection,dict):
+        if sought in collection.values():
+            return True
+        else:
+            return False
+    elif isinstance(collection,set):
+        if sought in collection:
+            return True
+        else:
+            return False
+    else:
+        if sought in collection[start:]:
+            return True
+        else: 
+            return False

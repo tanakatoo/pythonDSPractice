@@ -15,3 +15,13 @@ def two_list_dictionary(keys, values):
         >>> two_list_dictionary(['a', 'b', 'c'], [1, 2, 3, 4])
         {'a': 1, 'b': 2, 'c': 3}
    """
+    mydict={}
+    for key in keys:
+        if values:
+            for value in values:
+                mydict[key]=value
+                values.remove(value)
+                break
+        else:
+            mydict[key] = None
+    return mydict

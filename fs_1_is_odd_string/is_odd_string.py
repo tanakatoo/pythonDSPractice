@@ -27,5 +27,5 @@ def is_odd_string(word):
         >>> is_odd_string('amazing')
         True
     """
-
+    print(ord('a'),ord('A'))
     # Hint: you may find the ord() function useful here

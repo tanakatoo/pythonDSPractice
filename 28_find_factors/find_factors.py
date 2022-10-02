@@ -13,3 +13,11 @@ def find_factors(num):
     >>> find_factors(321421)
     [1, 293, 1097, 321421]
     """
+    all_factors = []
+    for i in range(1,num+1):
+        
+        divided = num/i
+        if divided.is_integer():
+            all_factors.append(i)
+            
+    return all_factors
